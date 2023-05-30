@@ -20,23 +20,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/mediaqueries.css">
   </head>
 
   <body>
-    <section style="background-image: url('imagens/poster01a.png'); background-size: cover;">
-      <div class="container">
-        <div class="ms-5">
-            <img src="imagens/logo.png" width="100" alt="">
-            <span class="lead ms-5">(53) 981-613-114</span>
+    <section style="background-color: #ffde59" id="capa">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="ms-5">
+              <img src="imagens/logo.png" width="100" alt="">
+              <span class="lead numero-margem">(53) 981-613-114</span>
+          </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-5 mt-3 ms-5 pb-5">
-                <h1 class="display-3">Dê ao seu cão a educação que ele merece:</h1>
-                <h1 class="display-3 fw-bold">Adestramento Profissional ao seu alcance!</h1>
+        <div class="row justify-content-start">
+            <div class="col-md-5 mt-3 ps-5 pb-5">
+                <h1 class="display-3" id="capa-titulo1">Dê ao seu cão a educação que ele merece:</h1>
+                <h1 class="display-3 fw-bold" id="capa-titulo2">Adestramento Profissional ao seu alcance!</h1>
 
                 <button type="button" class="btn btn-primary btn-lg">Contrate agora</button>
-            </div>            
+            </div>
+            
+            <div class="col-md-5">
+              <div>
+                <img src="" alt="">
+              </div>
+            </div>
         </div>
       </div>
     </section>
@@ -46,11 +55,11 @@
           <div class="row">
 
               <div class="col-md-6 mt-2">
-                <img src="imagens/imagem01.png" alt="">
+                <img src="imagens/imagem01.png" alt="" id="checklist-imagem">
               </div>
 
               <div class="col-md-6 mt-5">
-                <h2 class="display-4">Seu cão tem problemas de comportamento?</h2>
+                <h2 class="display-4 texto-centralizado-mobile">Seu cão tem problemas de comportamento?</h2>
                 <p class="mt-5">
                   <ul class="list-group list-group-flush border-0">
                     <li class="list-group-item display-6"><i class="fa-regular fa-square-check me-2"></i>Late em excesso</li>
@@ -61,7 +70,12 @@
                 </p>
               </div>
 
+              <div class="p-2 text-center">
               <h2 class="display-4 text-center my-4">Não espere que o comportamento se agrave e se torne irreversível. A psicologia canina é a solução!</h2>
+              <div class="d-grid gap-2">
+                <button class="btn btn-success btn-lg d-block d-sm-none" type="button">Contrate agora</button>
+              </div>
+            </div>
 
           </div>
       </div>
@@ -71,12 +85,12 @@
       <div class="container-fluid bg-warning mt-5 pb-5">
         <div class="row">
           <div class="col-md-6 mt-5 pt-4">
-            <video src="imagens/videoteste.mp4" class="object-fit-contain" control></video>
+            <video src="imagens/videoteste.mp4" class="object-fit-contain" control id="psicologia-video"></video>
           </div>
           <div class="col-md-6 mt-5">
-            <h2 class="display-6">Conheça a psicologia canina</h2>
-            <p class="lead">A psicologia canina é uma área de estudo que se concentra no comportamento, na cognição e nas emoções dos cães. Ela busca compreender como os cães pensam, aprendem e interagem com o ambiente e com os seres humanos. A psicologia canina envolve a aplicação de princípios e técnicas da psicologia humana para entender o comportamento dos cães e melhorar sua saúde mental e bem-estar.</p>
-            <p class="lead">É importante ressaltar que a psicologia canina não substitui a medicina veterinária, mas trabalha em conjunto com ela para proporcionar um cuidado abrangente e equilibrado aos cães.</p>
+            <h2 class="display-6 texto-centralizado-mobile">Conheça a psicologia canina</h2>
+            <p class="lead texto-centralizado-mobile">A psicologia canina é uma área de estudo que se concentra no comportamento, na cognição e nas emoções dos cães. Ela busca compreender como os cães pensam, aprendem e interagem com o ambiente e com os seres humanos. A psicologia canina envolve a aplicação de princípios e técnicas da psicologia humana para entender o comportamento dos cães e melhorar sua saúde mental e bem-estar.</p>
+            <p class="lead texto-centralizado-mobile">É importante ressaltar que a psicologia canina não substitui a medicina veterinária, mas trabalha em conjunto com ela para proporcionar um cuidado abrangente e equilibrado aos cães.</p>
             <div class="d-grid gap-2">
               <button class="btn btn-success btn-lg" type="button">Contrate a psicologia canina</button>
             </div>
@@ -90,16 +104,16 @@
         <div class="row">
           
           <div class="col-md-6 mt-5">
-            <h2 class="display-6">Por que adestrar seu cão?</h2>
-            <p class="lead mt-4">Você já se perguntou por que adestrar o seu cão é tão importante? O adestramento não é apenas sobre ensinar truques divertidos, mas sim sobre estabelecer uma comunicação clara e saudável com o seu fiel companheiro de quatro patas. Quando você investe tempo e esforço no adestramento, está proporcionando ao seu cão as habilidades necessárias para se tornar um membro equilibrado e feliz da sua família. O adestramento ajuda a fortalecer os vínculos entre vocês, promove a obediência e melhora a segurança tanto dentro quanto fora de casa.</p>
-            <p class="lead mt-4">Além disso, um cão adestrado é capaz de lidar melhor com situações sociais, reduzindo o estresse e melhorando a qualidade de vida de todos os envolvidos. Ao optar pelos nossos serviços de adestramento, você estará investindo no bem-estar do seu cão e na harmonia do seu lar.</p>
+            <h2 class="display-6 texto-centralizado-mobile">Por que adestrar seu cão?</h2>
+            <p class="lead mt-4 texto-centralizado-mobile">Você já se perguntou por que adestrar o seu cão é tão importante? O adestramento não é apenas sobre ensinar truques divertidos, mas sim sobre estabelecer uma comunicação clara e saudável com o seu fiel companheiro de quatro patas. Quando você investe tempo e esforço no adestramento, está proporcionando ao seu cão as habilidades necessárias para se tornar um membro equilibrado e feliz da sua família. O adestramento ajuda a fortalecer os vínculos entre vocês, promove a obediência e melhora a segurança tanto dentro quanto fora de casa.</p>
+            <p class="lead mt-4 texto-centralizado-mobile">Além disso, um cão adestrado é capaz de lidar melhor com situações sociais, reduzindo o estresse e melhorando a qualidade de vida de todos os envolvidos. Ao optar pelos nossos serviços de adestramento, você estará investindo no bem-estar do seu cão e na harmonia do seu lar.</p>
             <div class="d-grid gap-2">
               <button class="btn btn-success btn-lg" type="button">Contrate o adestramento</button>
             </div>
           </div>
 
           <div class="col-md-6 mt-5 pt-3">
-            <img src="imagens/imagem02.png" alt="homem adestrando cão pastor alemão">
+            <img src="imagens/imagem02.png" alt="homem adestrando cão pastor alemão" class="tamanho-imagem-mobile">
           </div>
 
         </div>
@@ -114,7 +128,7 @@
         <p class="text-center lead">Através da psicologia canina o adestramento segue o passo a passo para o melhor resultado:</p>
 
 
-          <div class="d-flex justify-content-around mt-5">
+          <div class="d-flex justify-content-around mt-5 flex-coluna-mobile">
 
             <div class="m-1">
               <img src="imagens/imagem09.png" width="300" class="rounded">
@@ -135,21 +149,21 @@
       </div>  
     </section>
 
-    <section><!--Psicologia Canina-->
+    <section><!--Adestrador-->
 
       <div class="container-fluid mt-5 pb-5">
 
         <div class="row">
 
-          <div class="col-md-6 mt-5 ps-5">
-            <img src="imagens/imagem08.jpg" width="600">
+          <div class="col-md-6" style="padding-left: 40px;">
+            <img src="imagens/imagem08.jpg" width="600" class="tamanho-imagem-mobile-adestrador">
           </div>
 
           <div class="col-md-6 mt-5">
-            <h2 class="display-6">Adestramento Confiável</h2>
-            <p class="lead">A psicologia canina é uma área de estudo que se concentra no comportamento, na cognição e nas emoções dos cães. Ela busca compreender como os cães pensam, aprendem e interagem com o ambiente e com os seres humanos. A psicologia canina envolve a aplicação de princípios e técnicas da psicologia humana para entender o comportamento dos cães e melhorar sua saúde mental e bem-estar.</p>
-            <p class="lead">É importante ressaltar que a psicologia canina não substitui a medicina veterinária, mas trabalha em conjunto com ela para proporcionar um cuidado abrangente e equilibrado aos cães.</p>
-            <p class="lead">A psicologia canina é uma área de estudo que se concentra no comportamento, na cognição e nas emoções dos cães. Ela busca compreender como os cães pensam, aprendem e interagem com o ambiente e com os seres humanos. A psicologia canina envolve a aplicação de princípios e técnicas da psicologia humana para entender o comportamento dos cães e melhorar sua saúde mental e bem-estar.</p>
+            <h2 class="display-6 texto-centralizado-mobile">Adestramento Confiável</h2>
+            <p class="lead texto-centralizado-mobile">A psicologia canina é uma área de estudo que se concentra no comportamento, na cognição e nas emoções dos cães. Ela busca compreender como os cães pensam, aprendem e interagem com o ambiente e com os seres humanos. A psicologia canina envolve a aplicação de princípios e técnicas da psicologia humana para entender o comportamento dos cães e melhorar sua saúde mental e bem-estar.</p>
+            <p class="lead texto-centralizado-mobile">É importante ressaltar que a psicologia canina não substitui a medicina veterinária, mas trabalha em conjunto com ela para proporcionar um cuidado abrangente e equilibrado aos cães.</p>
+            <p class="lead texto-centralizado-mobile">A psicologia canina é uma área de estudo que se concentra no comportamento, na cognição e nas emoções dos cães. Ela busca compreender como os cães pensam, aprendem e interagem com o ambiente e com os seres humanos.</p>
             <div class="d-grid gap-2">
               <button class="btn btn-success btn-lg pb-1" type="button">Contate o adestrador</button>
             </div>
@@ -159,7 +173,7 @@
 
         <div class="row"><!--faixa credibilidade-->
 
-          <div class="bg-warning d-flex justify-content-around py-5">
+          <div class="bg-warning d-flex justify-content-around py-5 flex-coluna-mobile faixa-margem">
             
             <div class="text-center">
               <img src="imagens/iconeMala.png" width="100" alt="...">
@@ -212,11 +226,11 @@
         </div>
 
         <div class="row">
-          <div class="d-flex justify-content-around my-4">
-            <div><img src="imagens/imagem03.png" width="300" class="rounded"></div>
-            <div><img src="imagens/imagem04.png" width="300"class="rounded"></div>
-            <div><img src="imagens/imagem05.png" width="300" class="rounded"></div>
-            <div><img src="imagens/imagem06.png" width="300" class="rounded"></div>
+          <div class="d-flex justify-content-around my-4 flex-coluna-mobile">
+            <div class="espaco-margem"><img src="imagens/imagem03.png" width="300" class="rounded"></div>
+            <div class="espaco-margem"><img src="imagens/imagem04.png" width="300"class="rounded"></div>
+            <div class="espaco-margem"><img src="imagens/imagem05.png" width="300" class="rounded"></div>
+            <div class="espaco-margem"><img src="imagens/imagem06.png" width="300" class="rounded"></div>
           </div>
         </div>
 
@@ -231,21 +245,25 @@
 
         <div class="row justify-content-around mt-5">
           <div class="col-md-3">
-            <img src="imagens/imagem12.png" width="200">
-            <p class="blackquote fs-5">"Parece até milagre! Ele não come mais nossos calçados e sempre pede para fazer as necessidades no local apropriado, fora da casa."
-              <span class="blockquote-footer">Tutor do Rex, pastor alemão</span>
-            </p>
+            <div class="">
+              <img src="imagens/imagem12.png" width="200" class="ps-5 depoimentos-alinhamento">
+            </div>
+            <div>
+              <p class="blackquote fs-5">"Parece até milagre! Ele não come mais nossos calçados e sempre pede para fazer as necessidades no local apropriado, fora da casa."
+                <span class="blockquote-footer">Tutor do Rex, pastor alemão</span>
+              </p>
+            </div>
           </div>
 
           <div class="col-md-3">
-            <img src="imagens/imagem13.png" width="200">
+            <img src="imagens/imagem13.png" width="200" class="ps-5 depoimentos-alinhamento">
             <p class="blackquote fs-5">"Parece até milagre! Ele não come mais nossos calçados e sempre pede para fazer as necessidades no local apropriado, fora da casa."
               <span class="blockquote-footer">Tutora da Kira, shitzu</span>
             </p>
           </div>
 
           <div class="col-md-3">
-            <img src="imagens/imagem14.png" width="200">
+            <img src="imagens/imagem14.png" width="200" class="ps-5 depoimentos-alinhamento">
             <p class="blackquote fs-5">"Parece até milagre! Ele não come mais nossos calçados e sempre pede para fazer as necessidades no local apropriado, fora da casa."
               <span class="blockquote-footer">Tutor do Tor, pitbull</span>
             </p>
@@ -254,17 +272,16 @@
 
         <p class="lead text-center mt-4">Tenha também essa alegria de ter um companheiro confiável e um comportamento feliz por aprender muito do que o adestramento pode proporcionar através da psicologia canina.</p>
         
-        <div class="row justify-content-center mt-5">
-          <div class="card mb-3 bg-warning" style="">
+        <div class="row justify-content-center mt-5 depoimentos-caixa">
+          <div class="card mb-3 bg-warning" >
             <div class="row g-0">
-              <div class="col-md-4 ps-5">
+              <div class="col-md-4 ps-5 tamanho-logo">
                 <img src="imagens/logo.png" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
-                <div class="card-body pt-5 px-5">
+                <div class="card-body px-5">
                   <h1 class="card-title display-4 pt-3">Complexo Canino</h5>
-                  <p class="card-text lead">Não perca tempo e entre em contato agora com o melhor adestrador da região de Rio Grande e faça seu orçamento, marque umavisita e tiresuas dúvidas.</p>
-                  <p class="card-text"></p>
+                  <p class="card-text lead">Não perca tempo e entre em contato agora com o melhor adestrador da região de Rio Grande e faça seu orçamento, marque uma visita e tire suas dúvidas.</p>
                 </div>
               </div>
               <div class="pb-3">
@@ -284,19 +301,18 @@
       <hr>
       <small>
         <div class="container">
-          <div class="row justify-content-between">
+          <div class="row justify-content-between rodape-alinhamento">
             <div class="col-md-2 ps-5 pb-2">
               <img src="imagens/logo.png" width="80" alt="">
             </div>
             <div class="col-md-6">
-              <p>2023 - Parcão Complexo Canino. Responsável Anderson Dias Guimarães.
+              <p>2023 Parcão Complexo Canino. <br>Responsável Anderson Dias Guimarães. <br>
                 CNPJ 40.171.828/0001-27 <br>
                 Av. Itália, 1730, Rio Grande- RS
               </p>
             </div>
             <div class="col-md-4">
-              
-            <span class="fs-2 me-5 alinhamento-redes"><i class="fa-brands fa-facebook"></i></span>
+            <span class="fs-2 pe-5 alinhamento-redes"><i class="fa-brands fa-facebook"></i></span>
             <span class="fs-2 alinhamento-redes"><i class="fa-brands fa-instagram"></i></span>
             <span class="fs-2 alinhamento-redes"><i class="fa-brands fa-whatsapp"></i></span>
             </div>
