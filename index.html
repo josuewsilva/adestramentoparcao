@@ -4,325 +4,431 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Parcão Adestramento</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
-    <!--fontawesome-->
-    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <style>
+      .checklist-botao{
+        margin-left: 75px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
 
-    <!--font-family: 'Mitr', sans-serif;-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;400;700&display=swap" rel="stylesheet">
+      @media(max-width: 576px){
 
-    <!--font-family: 'Lexend', sans-serif;-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;400;700&display=swap" rel="stylesheet">
+        #barra-credibilidade-mobile{
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 120px;
+          padding-top: 25px;
+        }
 
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="css/mediaqueries.css">
+        #perfil-depoimento-mobile{
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 60px;
+          padding-top: 25px;
+        }
+
+        #caixa-depoimento-mobile{
+          margin-top: -60px;
+          text-align: center;
+        }
+
+        #rodape-alinhamento{
+          flex-direction: column;
+          justify-content: center;
+          padding-left: 50px;
+        }
+
+        #rodape-logo-alinhamento{
+          padding-left: 70px;
+        }
+
+        #alinhamento-depoimento{
+          text-align: justify;
+        }
+      }
+    </style>
   </head>
 
+
+
+
   <body>
-    <section class="bg-warning">
+    <nav class="navbar navbar-expand-lg bg-primary">
       <div class="container-fluid">
-        <div class="row">
-          <div class="ms-5">
-              <img src="imagens/logo.png" width="100" alt="">
-              <span class="lead numero-margem">(53) 981-613-114</span>
+        <a class="navbar-brand" href="#">
+          <img src="imagens/logo.png" width="80px">
+        </a>
+
+        <div class="d-sm-none d-block">
+            <span class="me-3"><!--whatsapp-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-whatsapp text-white" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+              </svg>
+            </span>
+
+            <span class="me-3"><!--instagram-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-instagram text-white" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+              </svg>
+            </span>
+
+            <span class="me-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-facebook text-white" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg><!--facebook-->
+            </span>
+
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Guia de Raças</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Serviços
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Adestramento</a></li>
+                <li><a class="dropdown-item" href="#">Banho e Tosa</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Creche</a></li>
+                <li><a class="dropdown-item" href="#">Hotel</a></li>
+                
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Passeios</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="d-sm-block d-none">
+            <span class="me-3"><!--whatsapp-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-whatsapp text-white" viewBox="0 0 16 16">
+                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+              </svg>
+            </span>
+
+            <span class="me-3"><!--instagram-->
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-instagram text-white" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+              </svg>
+            </span>
+
+            <span class="me-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-facebook text-white" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg><!--facebook-->
+            </span>
+
+        </div>
+
+      </div>
+    </nav>
+
+    <section class=""><!--Banner inicial-->
+
+      <div class="card text-bg-dark">
+        <img src="imagens/poster01a.png" class="card-img" alt="...">
+        <div class="card-img-overlay d-sm-block d-none mt-5 ms-3">
+          <h5 class="display-2 text-dark">Dê ao seu cão a <br>educação que <br>ele merece:</h5>
+          <p class="display-2 text-dark fw-bold">Adestramento <br>ao seu alcance!</p>
+          <button type="button" class="btn btn-lg btn-primary mt-5 ms-5 px-5">Contrate Adestramento</button>
+        </div>
+
+        <!---------CONFIGURAÇÃO MOBILE-------->
+        <div class="card-img-overlay d-sm-none d-block">
+          <h5 class=" lead text-dark">Dê ao seu cão <br>a educação que <br>ele merece:</h5>
+          <p class="lead text-dark fw-bold">Adestramento <br>ao seu alcance!</p>
+          <button type="button" class="btn btn-sm btn-primary" style="margin-top: -10px;">Contrate</button>
+        </div>
+        <!------------------------------------>
+      </div>
+
+    </section><!--FBanner inicial-->
+
+    <section class="container pt-5"><!--Checklist-->
+      <div class="row">
+        <div class="col-md-6">
+          <img src="imagens/imagem01.png" alt="" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+          <h2 class="display-5">Seu cão tem problemas de comportamento?</h2>
+          <ul class="list-group ">
+            <li class="list-group-item border-0 lead">&#10003 Late em excesso</li>
+            <li class="list-group-item border-0 lead">&#10003 Pula nas pessoas</li>
+            <li class="list-group-item border-0 lead">&#10003 Destrói móveis e objetos</li>
+            <li class="list-group-item border-0 lead">&#10003 Faz as necessidades fora de lugar</li>
+          </ul>
+          <button type="button" class="btn btn-primary btn-lg text-center checklist-botao">Botão da solução</button>
+        </div>
+        <h2 class="display-5 text-center">Não espere que o comportamento se agrave e se torne irreversível. A psicologia canina é a solução!</h2>
+      </div>
+    </section><!--FChecklist-->
+
+    <section class="container pt-5"><!--Psicologia Canina-->
+      <div class="row bg-warning">
+
+        <div class="col-md-6 d-sm-block d-none">
+          <div class="ratio ratio-4x3">
+            <video src="imagens/videoteste.mp4" controls class="embed-responsive-item pb-3"></video>
+          </div>
+        </div>
+        
+        <div class="col-md-6 d-sm-block d-none">
+          <h2 class="display-6 pt-5">Conheça a psicologia canina</h2>
+          <p class="lead">A psicologia canina é uma área de estudo que se concentra no comportamento, na cognição e nas emoções dos cães. Ela busca compreender como os cães pensam, aprendem e interagem com o ambiente e com os seres humanos. A psicologia canina envolve a aplicação de princípios e técnicas da psicologia humana para entender o comportamento dos cães e melhorar sua saúde mental e bem-estar.</p>
+          <div class="d-grid gap-2">
+            <button class="btn btn-primary" type="button">Saiba mais</button>
           </div>
         </div>
 
-        <div class="row justify-content-start">
-            <div class="col-md-5 mt-3 ps-5 pb-5">
-                <h1 class="display-3" id="capa-titulo1">Dê ao seu cão a educação que ele merece:</h1>
-                <h1 class="display-3 fw-bold" id="capa-titulo2">Adestramento Profissional ao seu alcance!</h1>
 
-                <button type="button" class="btn btn-primary btn-lg">Contrate agora</button>
-            </div>
-            
-            <div class="col-md-5 d-sm-block d-none">
-              <div>
-                <img src="imagens/Postercao.png" alt="">
-              </div>
-            </div>
+        <!---------CONFIGURAÇÃO MOBILE-------->
+        <div class="col-sm-6 d-sm-none d-block">
+          <h2 class="display-5 pt-4 text-center">Conheça a <br>psicologia canina</h2>
+          <p class="lead text-center">A psicologia canina é uma área de estudo que se concentra no comportamento, na cognição e nas emoções dos cães. Ela busca compreender como os cães pensam, aprendem e interagem com o ambiente e com os seres humanos. A psicologia canina envolve a aplicação de princípios e técnicas da psicologia humana para entender o comportamento dos cães e melhorar sua saúde mental e bem-estar.</p>
+          <button type="button" class="btn btn-primary btn-lg text-center checklist-botao px-5">Saiba Mais</button>
+        </div>
+
+        <div class="col-sm-6 d-sm-none d-block">
+          <div class="ratio ratio-4x3 mb-3">
+            <video src="imagens/videoteste.mp4" controls class="embed-responsive-item"></video>
+          </div>
+        </div>
+        <!------------------------------------>
+
+      </div>
+    </section><!--FPsicologia Canina-->
+
+    <section class="container mt-5"> <!--Adestrar-->
+      <div class="row">
+        
+        <div class="col-md-6">
+          <h2 class="display-5 text-center">Por que adestrar seu cão?</h2>
+          <p class="lead">O adestramento não é apenas sobre ensinar truques divertidos, mas sim sobre estabelecer uma comunicação clara e saudável com o seu fiel companheiro de quatro patas proporcionando ao seu cão as habilidades necessárias para se tornar um membro equilibrado e feliz da sua família. 
+          </p>
+          <p class="lead">
+            Além disso, um cão adestrado é capaz de lidar melhor com situações sociais, reduzindo o estresse e melhorando a qualidade de vida de todos os envolvidos. Ao optar pelos nossos serviços de adestramento, você estará investindo no bem-estar do seu cão e na harmonia do seu lar.
+          </p>
+          <button type="button" class="btn btn-primary btn-lg text-center checklist-botao">Botão da solução</button>
+        </div>
+
+        <div class="col-md-6">
+          <img src="imagens/imagem02.png" width="" alt="" class="img-fluid pt-4">
+        </div>
+
+      </div>
+    </section><!--FAdestrar-->
+
+    <section class="container mt-5"><!--Bases-->
+      <div class="row justify-content-around bg-warning pb-3">
+        
+        <h2 class="display-5 text-center pt-4">Bases do adestramento</h2>
+        <p class="lead text-center">Através da psicologia canina o adestramento segue o passo a passo para o melhor resultado:</p>
+        
+        <div class="col-md-3 pt-4">
+          <img src="imagens/imagem09.png" alt="" class="img-fluid rounded">
+          <p class="lead fw-bold text-center pt-4">Conexão Positiva</p>
+        </div>
+        <div class="col-md-3 pt-4">
+          <img src="imagens/imagem10.png" alt="" class="img-fluid rounded">
+          <p class="lead fw-bold text-center pt-4">Treinamentos</p>
+         </div>
+        <div class="col-md-3 pt-4">
+          <img src="imagens/imagem11.png" alt="" class="img-fluid rounded">
+          <p class="lead fw-bold text-center pt-4">Comandos Básicos</p>
+        </div>
+        
+      </div>
+    </section><!--FBases-->
+
+    <section class="container mt-5"> <!--Adestrador-->
+      <div class="row">
+        
+        <div class="col-md-6">
+          <h2 class="display-5 text-center">Adestramento Confiável</h2>
+          <p class="lead">O adestramento não é apenas sobre ensinar truques divertidos, mas sim sobre estabelecer uma comunicação clara e saudável com o seu fiel companheiro de quatro patas proporcionando ao seu cão as habilidades necessárias para se tornar um membro equilibrado e feliz da sua família. 
+          </p>
+          <p class="lead">
+            Além disso, um cão adestrado é capaz de lidar melhor com situações sociais, reduzindo o estresse e melhorando a qualidade de vida de todos os envolvidos. Ao optar pelos nossos serviços de adestramento, você estará investindo no bem-estar do seu cão e na harmonia do seu lar.
+          </p>
+          <button type="button" class="btn btn-primary btn-lg text-center checklist-botao">Contate o Adestrador</button>
+        </div>
+
+        <div class="col-md-6">
+          <img src="imagens/imagem08.jpg" alt="" class="img-fluid">
+        </div>
+
+      </div>
+
+      <div class="row bg-warning justify-content-around" id="barra-credibilidade-mobile">
+        <div class="col-md-2 pt-4">
+          <img src="imagens/iconeMala.png" alt="" class="img-fluid">
+          <p class="fw-bold ps-1 pt-2">&nbsp20 anos de<br>experiência</p>
+        </div>
+        <div class="col-md-2 pt-4">
+          <img src="imagens/iconeEstrutura.png" alt="" class="img-fluid">
+          <p class="fw-bold ps-1 pt-2">&nbspEstrutura <br>&nbspadequada</p>
+        </div>
+        <div class="col-md-2 pt-4">
+          <img src="imagens/iconeAtendimento.png" alt="" class="img-fluid">
+          <p class="fw-bold pt-2">&nbsp &nbsp &nbsp Melhor <br>atendimento</p>
+        </div>
+        <div class="col-md-2 pt-4 pb-2">
+          <img src="imagens/iconeAmor.png" alt="" class="img-fluid">
+          <p class="fw-bold ps-1 pt-2">Amor pelo <br>&nbsp &nbspque faz</p>
         </div>
       </div>
-    </section>
 
-    <section><!--Checklist-->
-      <div class="container-fluid">
+      <div class="text-center mt-5">
+        <h2 class="display-5">Fortaleça o vínculo entre você e seu cão com uma relação harmoniosa e baseada na confiança que só o adestramento pode trazer.</h2>
+        <button type="button" class="btn btn-primary btn-lg text-center mt-3">Entre em contato</button>
+      </div>
+      
+
+    </section><!--FAdestrador-->
+
+    <section class="container bg-warning p-0 mt-5"><!--Espaço-->
+      
+        <img src="imagens/banner01.png" alt="" class="img-fluid">
+      
+      <div class="row text-center">
+        <h2 class="display-6 pt-3">Conheça o Parcão</h2>
+        <p class="lead">Um complexo canino adequado para treinamento, adestramento e muita diversão para seu cachorro ter a melhor qualidade.</p>
+      </div>
+      <div class="row py-3">
+        <div class="col-md-3">
+          <img src="imagens/imagem03.png" alt="" class="img-fluid pb-3 px-2 rounded">
+        </div>
+        <div class="col-md-3">
+          <img src="imagens/imagem04.png" alt="" class="img-fluid pb-3 px-2 rounded">
+        </div>
+        <div class="col-md-3">
+          <img src="imagens/imagem05.png" alt="" class="img-fluid pb-3 px-2 rounded">
+        </div>
+        <div class="col-md-3">
+          <img src="imagens/imagem06.png" alt="" class="img-fluid pb-3 px-2 rounded">
+        </div>
+      </div>
+    </section><!--FEspaço-->
+
+    <section class="container mt-5"><!--Depoimentos-->
+
+      <h2 class="display-5 text-center">O que dizem nossos clientes</h2>
+
+      <div class="row justify-content-around" id="perfil-depoimento-mobile">
+        <div class="col-md-3">
+          <div class="card border-0" style="width: 14rem;">
+            <img src="imagens/imagem12.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text" id="alinhamento-depoimento">"Parece até milagre! Ele não come mais nossos calçados e sempre pede para fazer as necessidades no local apropriado, fora da casa."</p>
+              <blockquote class="blockquote-footer pt-3">
+                - Flávia,tutora do Rex, um Pastor Alemão.
+              </blockquote>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card border-0" style="width: 14rem;">
+            <img src="imagens/imagem13.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text" id="alinhamento-depoimento">"Parece até milagre! Ele não come mais nossos calçados e sempre pede para fazer as necessidades no local apropriado, fora da casa." </p>
+              <blockquote class="blockquote-footer pt-3">
+                - Gilda, tutora da Kira, uma shitzu.
+              </blockquote>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card border-0" style="width: 14rem;">
+            <img src="imagens/imagem14.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text" id="alinhamento-depoimento">"Parece até milagre! Ele não come mais nossos calçados e sempre pede para fazer as necessidades no local apropriado, fora da casa."</p>
+              <blockquote class="blockquote-footer pt-3">
+                - Igor tutor do Tor, pitbull.
+              </blockquote>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <p class="lead text-center">Tenha também essa alegria de ter um companheiro confiável e um comportamento feliz por aprender muito do que o adestramento pode proporcionar através da psicologia canina.</p>
+        </div>
+
+      </div>
+
+      <div class="row justify-content-center mt-3">
+        <div class="card mb-3 bg-warning" style="max-width: 768px;">
           <div class="row">
-
-              <div class="col-md-6 mt-2">
-                <img src="imagens/imagem01.png" alt="" id="checklist-imagem">
-              </div>
-
-              <div class="col-md-6 mt-5">
-                <h2 class="display-4 texto-centralizado-mobile">Seu cão tem problemas de comportamento?</h2>
-                <p class="mt-5">
-                  <ul class="list-group list-group-flush border-0">
-                    <li class="list-group-item display-6"><i class="fa-regular fa-square-check me-2"></i>Late em excesso</li>
-                    <li class="list-group-item display-6"><i class="fa-regular fa-square-check me-2"></i>Faz as necessidades fora de lugar</li>
-                    <li class="list-group-item display-6"><i class="fa-regular fa-square-check me-2"></i>Destrói móveis e objetos</li>
-                    <li class="list-group-item display-6"><i class="fa-regular fa-square-check me-2"></i>Pula nas pessoas</li>
-                  </ul>
-                </p>
-              </div>
-
-              <div class="p-2 text-center">
-              <h2 class="display-4 text-center my-4">Não espere que o comportamento se agrave e se torne irreversível. A psicologia canina é a solução!</h2>
-              <div class="d-grid gap-2">
-                <button class="btn btn-success btn-lg d-block d-sm-none" type="button">Contrate agora</button>
-              </div>
-            </div>
-
-          </div>
-      </div>
-    </section><!--Fim da Checklist-->
-
-    <section><!--Psicologia Canina-->
-      <div class="container-fluid bg-warning mt-5 pb-5">
-        <div class="row">
-          <div class="col-md-6 mt-5 pt-4">
-            <video src="imagens/videoteste.mp4" class="object-fit-contain" control id="psicologia-video"></video>
-          </div>
-          <div class="col-md-6 mt-5">
-            <h2 class="display-6 texto-centralizado-mobile">Conheça a psicologia canina</h2>
-            <p class="lead texto-centralizado-mobile">A psicologia canina é uma área de estudo que se concentra no comportamento, na cognição e nas emoções dos cães. Ela busca compreender como os cães pensam, aprendem e interagem com o ambiente e com os seres humanos. A psicologia canina envolve a aplicação de princípios e técnicas da psicologia humana para entender o comportamento dos cães e melhorar sua saúde mental e bem-estar.</p>
-            <p class="lead texto-centralizado-mobile">É importante ressaltar que a psicologia canina não substitui a medicina veterinária, mas trabalha em conjunto com ela para proporcionar um cuidado abrangente e equilibrado aos cães.</p>
-            <div class="d-grid gap-2">
-              <button class="btn btn-success btn-lg" type="button">Contrate a psicologia canina</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section><!--Por que adestrar-->
-      <div class="container-fluid mt-5 pb-5">
-        <div class="row">
-          
-          <div class="col-md-6 mt-5">
-            <h2 class="display-6 texto-centralizado-mobile">Por que adestrar seu cão?</h2>
-            <p class="lead mt-4 texto-centralizado-mobile">Você já se perguntou por que adestrar o seu cão é tão importante? O adestramento não é apenas sobre ensinar truques divertidos, mas sim sobre estabelecer uma comunicação clara e saudável com o seu fiel companheiro de quatro patas. Quando você investe tempo e esforço no adestramento, está proporcionando ao seu cão as habilidades necessárias para se tornar um membro equilibrado e feliz da sua família. O adestramento ajuda a fortalecer os vínculos entre vocês, promove a obediência e melhora a segurança tanto dentro quanto fora de casa.</p>
-            <p class="lead mt-4 texto-centralizado-mobile">Além disso, um cão adestrado é capaz de lidar melhor com situações sociais, reduzindo o estresse e melhorando a qualidade de vida de todos os envolvidos. Ao optar pelos nossos serviços de adestramento, você estará investindo no bem-estar do seu cão e na harmonia do seu lar.</p>
-            <div class="d-grid gap-2">
-              <button class="btn btn-success btn-lg" type="button">Contrate o adestramento</button>
-            </div>
-          </div>
-
-          <div class="col-md-6 mt-5 pt-3">
-            <img src="imagens/imagem02.png" alt="homem adestrando cão pastor alemão" class="tamanho-imagem-mobile">
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <section><!--Bases do Adestramento-->
-
-      <div class="container-fluid bg-warning py-5">
-
-        <h2 class=" display-6 text-center">Bases do adestramento</h2>
-        <p class="text-center lead">Através da psicologia canina o adestramento segue o passo a passo para o melhor resultado:</p>
-
-
-          <div class="d-flex justify-content-around mt-5 flex-coluna-mobile">
-
-            <div class="m-1">
-              <img src="imagens/imagem09.png" width="300" class="rounded">
-              <p class="lead fw-bold text-center mt-3">Conexão Positiva</p>
-            </div>
-
-            <div class="m-1">
-              <img src="imagens/imagem10.png" width="300" class="rounded">
-              <p class="lead fw-bold text-center mt-3">Treinamentos</p>
-            </div>
-
-            <div class="m-1">
-              <img src="imagens/imagem11.png" width="300" class="rounded">
-              <p class="lead fw-bold text-center mt-3">Comandos Básicos</p>
-            </div>
-          
-          </div>
-      </div>  
-    </section>
-
-    <section><!--Adestrador-->
-
-      <div class="container-fluid mt-5 pb-5">
-
-        <div class="row">
-
-          <div class="col-md-6" style="padding-left: 40px;">
-            <img src="imagens/imagem08.jpg" width="600" class="tamanho-imagem-mobile-adestrador">
-          </div>
-
-          <div class="col-md-6 mt-5">
-            <h2 class="display-6 texto-centralizado-mobile">Adestramento Confiável</h2>
-            <p class="lead texto-centralizado-mobile">A psicologia canina é uma área de estudo que se concentra no comportamento, na cognição e nas emoções dos cães. Ela busca compreender como os cães pensam, aprendem e interagem com o ambiente e com os seres humanos. A psicologia canina envolve a aplicação de princípios e técnicas da psicologia humana para entender o comportamento dos cães e melhorar sua saúde mental e bem-estar.</p>
-            <p class="lead texto-centralizado-mobile">É importante ressaltar que a psicologia canina não substitui a medicina veterinária, mas trabalha em conjunto com ela para proporcionar um cuidado abrangente e equilibrado aos cães.</p>
-            <p class="lead texto-centralizado-mobile">A psicologia canina é uma área de estudo que se concentra no comportamento, na cognição e nas emoções dos cães. Ela busca compreender como os cães pensam, aprendem e interagem com o ambiente e com os seres humanos.</p>
-            <div class="d-grid gap-2">
-              <button class="btn btn-success btn-lg pb-1" type="button">Contate o adestrador</button>
-            </div>
-          </div>
-
-        </div><!--Frow-->
-
-        <div class="row"><!--faixa credibilidade-->
-
-          <div class="bg-warning d-flex justify-content-around py-5 flex-coluna-mobile faixa-margem">
-            
-            <div class="text-center">
-              <img src="imagens/iconeMala.png" width="100" alt="...">
-                <p class="card-text text-center lead fw-bold my-4">20 anos de experiência</p>
-            </div>
-
-            <div class="text-center">
-              <img src="imagens/iconeEstrutura.png" width="100" alt="...">
-                <p class="card-text text-center lead fw-bold my-4">Estrutura Adequada</p>
-            </div>
-
-            <div class="text-center">
-              <img src="imagens/iconeAtendimento.png" width="100" alt="...">
-                <p class="card-text text-center lead fw-bold my-4">Melhor Atendimento</p>
-            </div>
-
-            <div class="text-center">
-              <img src="imagens/iconeAmor.png" width="100" alt="...">
-                <p class="card-text text-center lead fw-bold my-4">Amor pelo que faz</p>
-            </div>
-
-
-
-          </div>
-
-        </div>
-
-      </div><!--Fcontainer-->
-    </section>
-
-    <section><!--Espaço-->
-    
-      <div class="container">
-        <h2 class="display-3 text-center">Fortaleça o vínculo entre você e seu cão com uma relação harmoniosa e baseada na confiança que só o adestramento pode trazer.</h2>
-        <div class="d-grid gap-2">
-          <button class="btn btn-success btn-lg" type="button">Contrate os serviços de adestramento</button>
-        </div>
-      </div>
-
-      <div class="container-fluid bg-warning mt-5">
-
-        <div class="row">
-          <div class="card mb-3 bg-warning border-0">
-            <img src="imagens/banner01.png" class="card-img-top pt-3 rounded" alt="...">
-            <div class="card-body text-center">
-              <h2 class="card-title display-6 pt-3">Conheça o Parcão</h2>
-              <p class="card-text lead">Um complexo canino adequado para treinamento, adestramento e muita diversão para seu cachorro ter a melhor qualidade.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="d-flex justify-content-around my-4 flex-coluna-mobile">
-            <div class="espaco-margem"><img src="imagens/imagem03.png" width="300" class="rounded"></div>
-            <div class="espaco-margem"><img src="imagens/imagem04.png" width="300"class="rounded"></div>
-            <div class="espaco-margem"><img src="imagens/imagem05.png" width="300" class="rounded"></div>
-            <div class="espaco-margem"><img src="imagens/imagem06.png" width="300" class="rounded"></div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section><!--Depoimentos-->
-      
-      <div class="container">
-        
-        <h2 class="display-6 text-center mt-5">O que dizem os clientes</h2>
-
-        <div class="row justify-content-around mt-5">
-          <div class="col-md-3">
-            <div class="">
-              <img src="imagens/imagem12.png" width="200" class="ps-5 depoimentos-alinhamento">
-            </div>
-            <div>
-              <p class="blackquote fs-5">"Parece até milagre! Ele não come mais nossos calçados e sempre pede para fazer as necessidades no local apropriado, fora da casa."
-                <span class="blockquote-footer">Tutor do Rex, pastor alemão</span>
-              </p>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <img src="imagens/imagem13.png" width="200" class="ps-5 depoimentos-alinhamento">
-            <p class="blackquote fs-5">"Parece até milagre! Ele não come mais nossos calçados e sempre pede para fazer as necessidades no local apropriado, fora da casa."
-              <span class="blockquote-footer">Tutora da Kira, shitzu</span>
-            </p>
-          </div>
-
-          <div class="col-md-3">
-            <img src="imagens/imagem14.png" width="200" class="ps-5 depoimentos-alinhamento">
-            <p class="blackquote fs-5">"Parece até milagre! Ele não come mais nossos calçados e sempre pede para fazer as necessidades no local apropriado, fora da casa."
-              <span class="blockquote-footer">Tutor do Tor, pitbull</span>
-            </p>
-          </div>
-        </div>
-
-        <p class="lead text-center mt-4">Tenha também essa alegria de ter um companheiro confiável e um comportamento feliz por aprender muito do que o adestramento pode proporcionar através da psicologia canina.</p>
-        
-        <div class="row justify-content-center mt-5 depoimentos-caixa">
-          <div class="card mb-3 bg-warning" >
-            <div class="row g-0">
-              <div class="col-md-4 ps-5 tamanho-logo">
-                <img src="imagens/logo.png" class="img-fluid rounded-start" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body px-5">
-                  <h1 class="card-title display-4 pt-3">Complexo Canino</h5>
-                  <p class="card-text lead">Não perca tempo e entre em contato agora com o melhor adestrador da região de Rio Grande e faça seu orçamento, marque uma visita e tire suas dúvidas.</p>
-                </div>
-              </div>
-              <div class="pb-3">
-                <div class="d-grid gap-2">
-                  <button class="btn btn-primary btn-lg" type="button">Adestramento</button>
-                </div>
-            </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-
-    <footer class="mt-5">
-      <hr>
-      <small>
-        <div class="container">
-          <div class="row justify-content-between rodape-alinhamento">
-            <div class="col-md-2 ps-5 pb-2">
-              <img src="imagens/logo.png" width="80" alt="">
-            </div>
-            <div class="col-md-6">
-              <p>2023 Parcão Complexo Canino. <br>Responsável Anderson Dias Guimarães. <br>
-                CNPJ 40.171.828/0001-27 <br>
-                Av. Itália, 1730, Rio Grande- RS
-              </p>
-            </div>
             <div class="col-md-4">
-            <span class="fs-2 pe-5 alinhamento-redes"><i class="fa-brands fa-facebook"></i></span>
-            <span class="fs-2 alinhamento-redes"><i class="fa-brands fa-instagram"></i></span>
-            <span class="fs-2 alinhamento-redes"><i class="fa-brands fa-whatsapp"></i></span>
+              <img src="imagens/logo.png" class="img-fluid" alt="...">
+            </div>
+            <div class="col-md-8" id="caixa-depoimento-mobile">
+              <div class="card-body">
+                <h5 class="card-title display-5">Complexo Canino</h5>
+                <p class="card-text lead">Não perca tempo e entre em contato agora com o melhor adestrador da região de Rio Grande e faça seu orçamento, marque uma visita e tire suas dúvidas.</p>
+                <div class="d-grid gap-2">
+                  <button class="btn btn-primary" type="button">Saiba mais</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </small>  
-      
+      </div>
+    </section><!--FDepoimentos-->
+
+    <footer class="container-fluid">
+      <hr>
+      <div class="row justify-content-center pb-3" id="rodape-alinhamento">
+        <div class="col-md-2" id="rodape-logo-alinhamento">
+          <img src="imagens/logo.png" class="w-50" alt="">
+        </div>
+        <div class="col-md-5 pt-3">
+          <small>
+          <p>&copy;2023 Parcão Complexo Canino. Responsável Anderson Dias Guimarães.</p>
+          <p>CNPJ 40.171.828/0001-27. Av. Itália, 1730, Rio Grande- RS</p>
+          </small>
+        </div>
+        <div class="col-md-3 pt-4">
+          <span class="ms-5 me-3"><!--whatsapp-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-whatsapp text-dark" viewBox="0 0 16 16">
+              <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+            </svg>
+          </span>
+
+          <span class="me-3"><!--instagram-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-instagram text-dark" viewBox="0 0 16 16">
+              <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+            </svg>
+          </span>
+
+          <span class=""><!--facebook-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-facebook text-dark" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+            </svg>
+          </span>
+
+        </div>
+      </div>
     </footer>
     
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
 </html>
